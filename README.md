@@ -38,16 +38,26 @@ __Run Arduino IDE with following commands__
 ./arduino-ide_*.AppImage --no-sandbox
 ```
 
-## Make Alias to run Arduino IDE
+## Permanent alias to run Arduino IDE
 __run the following command__
 ```
-alias arduino-ide='./arduino-ide_*.AppImage --no-sandbox'
+nano ~/.bashrc
 ```
-pay attention on *'./arduino-ide_*.AppImage --no-sandbox'*
+__add this on the bottom__
+```
+alias arduino-ide='/home/user/moses-jaguar/arduino-ide_*.AppImage --no-sandbox'
+```
+pay attention on *'./arduino-ide_*.AppImage --no-sandbox' and the path*
+
+__last__
+```
+source ~/.bashrc
+```
+
 
 # Run Arduino IDE
 ```
-arduino-ide
+arduino
 ```
 
 

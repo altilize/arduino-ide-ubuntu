@@ -1,1 +1,53 @@
-# arduino-ide-ubuntu
+# Arduino IDE on UBUNTU
+## Install and setup arduino IDE on ubuntu
+
+1. __Download the newest version of Arduino IDE__ at https://www.arduino.cc/en/software and choose .AppImage for linux
+2. Open terminal and __go to .AppImage file's directory__
+```
+cd Downloads
+```
+3. Give execution access to .AppImage
+```
+chmod +x arduino-ide_*.AppImage
+```
+4. __Run Arduino IDE__
+```
+./arduino-ide_*.AppImage --no-sandbox
+```
+
+## Solved ERROR
+### AppImages require FUSE to run. 
+*You might still be able to extract the contents of this AppImage 
+if you run it with the --appimage-extract option. 
+See https://github.com/AppImage/AppImageKit/wiki/FUSE 
+for more information*
+
+__Install Libfuse2__
+```
+sudo apt update
+sudo apt install libfuse2 -y
+```
+### Sandbox Error
+*r: 0
+License accepted
+[11323:0315/165559.773244:FATAL:setuid_sandbox_host.cc(158)] The SUID sandbox helper binary was found, but is not configured correctly. Rather than run without sandboxing I'm aborting now. You need to make sure that /tmp/.mount_arduinpEQrIt/chrome-sandbox is owned by root and has mode 4755.
+Trace/breakpoint trap (core dumped)*
+
+__Run Arduino IDE with following commands__
+```
+./arduino-ide_*.AppImage --no-sandbox
+```
+
+## Make Alias to run Arduino IDE
+__run the following command__
+```
+alias arduino-ide='./arduino-ide_*.AppImage --no-sandbox'
+```
+pay attention on *'./arduino-ide_*.AppImage --no-sandbox'*
+
+# Run Arduino IDE
+```
+arduino-ide
+```
+
+

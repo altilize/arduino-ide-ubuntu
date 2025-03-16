@@ -55,9 +55,29 @@ source ~/.bashrc
 ```
 
 
-# Run Arduino IDE
+## Run Arduino IDE
 ```
 arduino
 ```
+
+# Install STM32duino (Arduino Core for STM32)
+1. Buka Arduino IDE
+2. Pergi ke File → Preferences
+3. Tambahkan URL berikut di Additional Board Manager URLs:
+```
+https://github.com/stm32duino/BoardManagerFiles/raw/main/package_stmicroelectronics_index.json
+```
+4. Install "STM32 MCU based boards" by STM32duino pada Board Manager
+5. Install STLINK Driver dari STMicroelectronics
+```
+https://www.st.com/en/development-tools/stsw-link007.html
+```
+6. Download STM32CubeProgrammer
+```
+https://www.st.com/en/development-tools/stm32cubeprog.html
+```
+
+
+
 
 
